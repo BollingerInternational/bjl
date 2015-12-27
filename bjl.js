@@ -12,11 +12,13 @@ bjl.cloneObject = function (src, dest) {
 };
 
 var Builder = (function () {
-function Builder() {
-}
-Builder.prototype.build = function (builder) {
-return builder.build();
-};
-return Builder;
+    
+    function Builder() {}
+
+    Builder.prototype.build = function (builder) {
+        return builder.build();
+    };
+
+    return Builder;
 })();
 blj.Builder = Builder;
