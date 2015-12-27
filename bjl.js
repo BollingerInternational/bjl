@@ -22,3 +22,16 @@ var Builder = (function () {
     return Builder;
 })();
 blj.Builder = Builder;
+
+var Factory = (function () {
+    function Factory() {}
+
+    Factory.Build = function (name) {
+        if (name === "august") return new August();
+
+        if (name === "employer") return new Employer();
+
+        return new DefaultClass();
+    };
+
+    return Factory;
